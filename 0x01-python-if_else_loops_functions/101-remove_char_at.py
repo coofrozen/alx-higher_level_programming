@@ -2,5 +2,12 @@
 def remove_char_at(str, n):
     if n < 0:
         return str
-    str1 = str[0:n] + str[n + 1:]
-    return str1
+    count = 0
+    str_copy = ""
+    for element in str:
+        if count == n:
+            count += 1
+            continue
+        str_copy += str[count]
+        count += 1
+    return str_copy
